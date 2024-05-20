@@ -2,6 +2,7 @@ import SorView from "./SorView.js";
 
 class PublikusView{
     #lista=[]
+    #szuloElem;
   
     constructor(lista, szuloElem){
         this.#szuloElem = szuloElem;
@@ -13,7 +14,7 @@ class PublikusView{
     }
 
     megjelenit(){
-        this.tablaElem.append(`<thead><tr><th>id</th><th>tevékenység neve</th><th>osztály</th><th>állapot</th></tr></thead>`);
+        this.tablaElem.append(`<thead><tr><th>ID</th><th>Tevékenység neve</th><th>Osztály</th><th>Állapot</th><th>Pont</th>/tr></thead>`);
         this.tablaElem.append(`<tbody></tbody>`);
         this.tbodyElem=$("tbody")
         this.#lista.forEach((element, index )=> {
